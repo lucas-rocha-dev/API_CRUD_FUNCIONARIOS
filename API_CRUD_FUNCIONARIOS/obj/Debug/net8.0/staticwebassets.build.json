@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "OfS9zDnDmblM7Zam6JjH9HQmqVKlip3RH2alkmN9bPQ=",
+  "Source": "API_CRUD_FUNCIONARIOS",
+  "BasePath": "_content/API_CRUD_FUNCIONARIOS",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

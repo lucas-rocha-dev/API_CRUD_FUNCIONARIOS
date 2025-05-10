@@ -1,0 +1,48 @@
+[
+  {
+    "ContainingType": "API_CRUD_FUNCIONARIOS.Controllers.FuncionaroController",
+    "Method": "CreateFuncionario",
+    "RelativePath": "Funcionaro/CreateFuncionario",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "funcionario",
+        "Type": "API_CRUD_FUNCIONARIOS.Models.Entities.Funcionario",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "API_CRUD_FUNCIONARIOS.Models.Response\u00601[[API_CRUD_FUNCIONARIOS.Models.Entities.Funcionario, API_CRUD_FUNCIONARIOS, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "API_CRUD_FUNCIONARIOS.Controllers.FuncionaroController",
+    "Method": "FuncionariGet",
+    "RelativePath": "Funcionaro/GetFuncionaro",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "API_CRUD_FUNCIONARIOS.Models.Response\u00601[[API_CRUD_FUNCIONARIOS.Models.Entities.Funcionario, API_CRUD_FUNCIONARIOS, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  }
+]
