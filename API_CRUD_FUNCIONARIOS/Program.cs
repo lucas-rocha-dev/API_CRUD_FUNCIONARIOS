@@ -1,9 +1,13 @@
 using API_CRUD_FUNCIONARIOS.Context;
+using API_CRUD_FUNCIONARIOS.Services;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+builder.Services.AddScoped<IFuncionarioService, FuncionarioService>();
+
+
 
 builder.Services.AddControllers();
 

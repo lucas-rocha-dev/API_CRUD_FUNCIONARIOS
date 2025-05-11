@@ -146,3 +146,4 @@ D:\Projetos\2025\estudo\API_CRUD_FUNCIONARIOS\API_CRUD_FUNCIONARIOS\bin\Debug\ne
 D:\Projetos\2025\estudo\API_CRUD_FUNCIONARIOS\API_CRUD_FUNCIONARIOS\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
 D:\Projetos\2025\estudo\API_CRUD_FUNCIONARIOS\API_CRUD_FUNCIONARIOS\bin\Debug\net8.0\MySqlConnector.dll
 D:\Projetos\2025\estudo\API_CRUD_FUNCIONARIOS\API_CRUD_FUNCIONARIOS\bin\Debug\net8.0\Pomelo.EntityFrameworkCore.MySql.dll
+D:\Projetos\2025\estudo\API_CRUD_FUNCIONARIOS\API_CRUD_FUNCIONARIOS\obj\Debug\net8.0\API_CRUD_FUNCIONARIOS.sourcelink.json

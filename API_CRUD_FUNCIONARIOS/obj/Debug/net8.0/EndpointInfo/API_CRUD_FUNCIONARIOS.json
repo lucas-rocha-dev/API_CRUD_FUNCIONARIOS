@@ -111,11 +111,7 @@
         "type": "object",
         "properties": {
           "dados": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Funcionario"
-            },
-            "nullable": true
+            "$ref": "#/components/schemas/Funcionario"
           },
           "status": {
             "type": "boolean"

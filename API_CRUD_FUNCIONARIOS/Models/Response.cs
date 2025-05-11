@@ -2,7 +2,7 @@
 {
     public class Response<T>
     {
-        public  List<T> DADOS { get; set; }
+        public  T? DADOS { get; set; }
         public  bool STATUS { get; set; }
     }
 }

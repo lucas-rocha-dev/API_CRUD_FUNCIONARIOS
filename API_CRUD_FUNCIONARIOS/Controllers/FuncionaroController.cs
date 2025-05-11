@@ -20,18 +20,18 @@ namespace API_CRUD_FUNCIONARIOS.Controllers
       
 
         [HttpPost("CreateFuncionario")]
-        public ActionResult<Response<Funcionario>> CreateFuncionario(Funcionario funcionario)
+        public async Task<ActionResult<Response<Funcionario>>> CreateFuncionario(Funcionario funcionario)
         {
-           var response = _service.CreateFuncionario(funcionario);
+           var response = await _service.CreateFuncionario(funcionario);
 
-            return response;
+            return Ok(response);
 
         }
 
         [HttpGet("GetFuncionaro")]
-        public ActionResult<Response<Funcionario>> FuncionariGet()
+        public async Task<ActionResult<Response<Funcionario>>> FuncionariGet()
         {
-            var response = _service.FuncionariGet();
+            var response = await _service.FuncionariGet();
 
             return Ok(response);
 
