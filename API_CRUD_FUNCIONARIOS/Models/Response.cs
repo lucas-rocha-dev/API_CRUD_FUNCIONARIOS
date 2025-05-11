@@ -4,5 +4,6 @@
     {
         public  T? DADOS { get; set; }
         public  bool STATUS { get; set; }
+        public string? MENSAGEM { get; set; }
     }
 }

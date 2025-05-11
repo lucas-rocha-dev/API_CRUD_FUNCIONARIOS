@@ -17,8 +17,6 @@ namespace API_CRUD_FUNCIONARIOS.Controllers
         }
 
 
-      
-
         [HttpPost("CreateFuncionario")]
         public async Task<ActionResult<Response<Funcionario>>> CreateFuncionario(Funcionario funcionario)
         {
@@ -28,13 +26,26 @@ namespace API_CRUD_FUNCIONARIOS.Controllers
 
         }
 
-        [HttpGet("GetFuncionaro")]
-        public async Task<ActionResult<Response<Funcionario>>> FuncionariGet()
+        [HttpGet("GetAllFuncionarios")]
+        public async Task<ActionResult<Response<Funcionario>>> GetAllFuncionarios()
         {
-            var response = await _service.FuncionariGet();
+            var response = await _service.GetAllFuncionarios();
 
             return Ok(response);
 
+        }
+        [HttpGet("GetPerId")]
+        public async Task<ActionResult<Response<Funcionario>>> GetPerId(int id)
+        {
+            var response = await _service.GetPerId(id);
+            return Ok(response);
+        }
+
+        [HttpDelete("DeletePerId")]
+        public async Task<ActionResult> DeletePerId(int id) {
+            var respostas = await _service.DeletePerId(id);
+            return Ok(respostas);
+        
         }
     }
 }
