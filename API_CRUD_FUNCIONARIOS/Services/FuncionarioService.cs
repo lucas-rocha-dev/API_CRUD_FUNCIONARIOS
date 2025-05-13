@@ -123,6 +123,44 @@ namespace API_CRUD_FUNCIONARIOS.Services
             
         }
 
+        public async Task<Response<Funcionario>> EditPerId(Funcionario funcionario)
+        {
+            Response<Funcionario> resposta = new Response<Funcionario>();
 
+            try {
+                var funcionarioResposta = await _context.Funcionarios.FirstOrDefaultAsync(fun => fun == funcionario);
+                if (funcionarioResposta == null) {
+                    resposta.STATUS = true;
+                    resposta.DADOS = null;
+                    resposta.MENSAGEM = "Funcionario não encontrado";
+                }
+                else {
+
+                    funcionarioResposta.NOME = funcionario.NOME;
+                    funcionarioResposta.SALARIO = funcionario.SALARIO;
+                    funcionarioResposta.CARGO = funcionario.CARGO;
+                    _context.Funcionarios.Update(funcionarioResposta);
+
+                    await _context.SaveChangesAsync();
+
+                    resposta.STATUS = true;
+                    resposta.DADOS = funcionario;
+                    resposta.MENSAGEM = "Funcionario Editado!";
+                    _context.Funcionarios.Remove(funcionario);
+                    await _context.SaveChangesAsync();
+                }
+                return resposta;
+
+
+            }
+            catch (Exception ex) {
+                resposta.STATUS = true;
+                resposta.DADOS = null;
+                resposta.MENSAGEM = ex.Message;
+
+                return resposta;
+
+            }
+        }
     }
 }
