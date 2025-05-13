@@ -111,7 +111,6 @@ namespace API_CRUD_FUNCIONARIOS.Services
                 }
                 return resposta;
             
-            
             } catch(Exception ex) {
                 resposta.STATUS = true;
                 resposta.DADOS = null;

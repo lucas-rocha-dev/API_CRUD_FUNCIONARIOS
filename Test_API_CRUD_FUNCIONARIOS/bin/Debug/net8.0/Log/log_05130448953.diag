@@ -1,0 +1,16 @@
+2025-05-13T04:21:48.9593512+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Version: 1.4.3+c252b64ad913ea9411fc5d17bfd5580d2d061497
+2025-05-13T04:21:48.9734081+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Logging mode: asynchronous
+2025-05-13T04:21:48.9747521+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Logging level: Information
+2025-05-13T04:21:48.9747567+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION CreateBuilderAsync entry time: 04:21:48.930
+2025-05-13T04:21:48.9947195+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION PID: 22252
+2025-05-13T04:21:48.9949560+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Runtime information: win-x64 - .NET 8.0.14
+2025-05-13T04:21:48.9949768+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Runtime location: C:\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.14\System.Private.CoreLib.dll
+2025-05-13T04:21:48.9949863+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION IsDynamicCodeSupported: True
+2025-05-13T04:21:48.9949945+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Test module: D:\Projetos\2025\estudo\API_CRUD_FUNCIONARIOS\Test_API_CRUD_FUNCIONARIOS\bin\Debug\net8.0\Test_API_CRUD_FUNCIONARIOS.dll
+2025-05-13T04:21:48.9953498+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Command line arguments: '--server --diagnostic --diagnostic-verbosity Information --diagnostic-output-directory D:\Projetos\2025\estudo\API_CRUD_FUNCIONARIOS\Test_API_CRUD_FUNCIONARIOS\bin\Debug\net8.0\Log --results-directory D:\Projetos\2025\estudo\API_CRUD_FUNCIONARIOS\TestResults --client-port 63613'
+2025-05-13T04:21:48.9971192+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION TESTINGPLATFORM_DEFAULT_HANG_TIMEOUT: ''
+2025-05-13T04:21:50.7982365+00:00 Microsoft.Testing.Platform.Hosts.TestHostBuilder INFORMATION Setting RegisterEnvironmentVariablesConfigurationSource: 'True'
+2025-05-13T04:21:50.8023734+00:00 Microsoft.Testing.Platform.Configurations.JsonConfigurationSource+JsonConfigurationProvider INFORMATION Config file 'D:\Projetos\2025\estudo\API_CRUD_FUNCIONARIOS\Test_API_CRUD_FUNCIONARIOS\bin\Debug\net8.0\Test_API_CRUD_FUNCIONARIOS.testconfig.json' not found.
+2025-05-13T04:21:50.8038597+00:00 Microsoft.Testing.Platform.Hosts.TestHostBuilder INFORMATION Setting PlatformExitProcessOnUnhandledException: 'False', config file: False environment variable:  VSTest mode: False
+2025-05-13T04:21:51.8878110+00:00 Microsoft.Testing.Platform.Requests.TestHostTestFrameworkInvoker INFORMATION Test framework UID: 'MSTest.Sdk' Version: '3.6.4' DisplayName: 'MSTest' Description: 'MSTest Framework for Microsoft Testing Platform'
+2025-05-13T04:21:52.1185487+00:00 Microsoft.Testing.Extensions.VSTestBridge.ObjectModel.MessageLoggerAdapter WARNING O atributo Runsettings "MaxCpuCount" não tem suporte no Microsoft.Testing.Platform e será ignorado
