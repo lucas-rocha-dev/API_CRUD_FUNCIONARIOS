@@ -2,11 +2,6 @@
 using API_CRUD_FUNCIONARIOS.Models.Entities;
 using API_CRUD_FUNCIONARIOS.Services;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Test_API_CRUD_FUNCIONARIOS
 {
