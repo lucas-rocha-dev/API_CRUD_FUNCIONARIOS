@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("API_CRUD_FUNCIONARIOS")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6966e9d4c05dfa16c55d8fa05808b2d70354ecdf")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1db8d9141a2e5d4d1dbaf5097d714a991d0b5654")]
 [assembly: System.Reflection.AssemblyProductAttribute("API_CRUD_FUNCIONARIOS")]
 [assembly: System.Reflection.AssemblyTitleAttribute("API_CRUD_FUNCIONARIOS")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

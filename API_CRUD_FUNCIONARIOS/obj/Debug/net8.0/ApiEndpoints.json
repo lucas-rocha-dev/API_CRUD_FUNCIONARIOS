@@ -47,8 +47,8 @@
   },
   {
     "ContainingType": "API_CRUD_FUNCIONARIOS.Controllers.FuncionarosController",
-    "Method": "Edit",
-    "RelativePath": "Funcionaros/{funcionario}",
+    "Method": "EditById",
+    "RelativePath": "Funcionaros",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -56,11 +56,6 @@
       {
         "Name": "funcionario",
         "Type": "API_CRUD_FUNCIONARIOS.Models.Entities.Funcionario",
-        "IsRequired": true
-      },
-      {
-        "Name": "funcionario",
-        "Type": "",
         "IsRequired": true
       }
     ],
