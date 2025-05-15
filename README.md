@@ -6,12 +6,10 @@ API RESTful desenvolvida com ASP.NET Core e MySQL para gerenciamento de funcion�
 
 ## 🚀 Tecnologias Utilizadas
 
-- ASP.NET Core 6
+- ASP.NET Core 
 - Entity Framework Core
 - MySQL
 - Swagger (Swashbuckle)
-- Injeção de Dependência (DI)
-
 ---
 
 ## 📁 Estrutura do Projeto
@@ -22,12 +20,3 @@ API RESTful desenvolvida com ASP.NET Core e MySQL para gerenciamento de funcion�
 - `Models/` – Entidades do banco
 - `Dto/` – Objetos de transferência de dados
 
----
-
-## ⚙️ Configuração do Ambiente
-
-### 1. Clone o repositório
-
-```bash
-git clone https://github.com/seu-usuario/seu-repositorio.git
-cd seu-repositorio
