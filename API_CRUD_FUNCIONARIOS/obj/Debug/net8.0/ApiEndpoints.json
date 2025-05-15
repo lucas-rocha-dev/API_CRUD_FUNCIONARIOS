@@ -47,6 +47,27 @@
   },
   {
     "ContainingType": "API_CRUD_FUNCIONARIOS.Controllers.FuncionarosController",
+    "Method": "Edit",
+    "RelativePath": "Funcionaros/{funcionario}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "funcionario",
+        "Type": "API_CRUD_FUNCIONARIOS.Models.Entities.Funcionario",
+        "IsRequired": true
+      },
+      {
+        "Name": "funcionario",
+        "Type": "",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API_CRUD_FUNCIONARIOS.Controllers.FuncionarosController",
     "Method": "GetById",
     "RelativePath": "Funcionaros/{id}",
     "HttpMethod": "GET",

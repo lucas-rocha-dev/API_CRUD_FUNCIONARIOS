@@ -12,7 +12,7 @@ namespace API_CRUD_FUNCIONARIOS.Services
         public Task<Response<List<Funcionario>>> GetAllFuncionarios();
         public Task<Response<Funcionario>> GetById(int id);
         public Task<Response<Funcionario>> Delete(int id);
-        public Task<Response<Funcionario>> EditPerId(Funcionario funcionario);
+        public Task<Response<Funcionario>> EditById(Funcionario funcionario);
 
     }
 }

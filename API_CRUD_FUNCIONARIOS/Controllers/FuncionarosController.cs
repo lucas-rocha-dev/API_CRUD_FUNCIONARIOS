@@ -4,6 +4,7 @@ using API_CRUD_FUNCIONARIOS.Models;
 using API_CRUD_FUNCIONARIOS.Models.Entities;
 using API_CRUD_FUNCIONARIOS.Services;
 using Microsoft.AspNetCore.Mvc;
+using System.Reflection.Metadata.Ecma335;
 
 namespace API_CRUD_FUNCIONARIOS.Controllers
 {
@@ -47,6 +48,12 @@ namespace API_CRUD_FUNCIONARIOS.Controllers
             var respostas = await _service.Delete(id);
             return Ok(respostas);
         
+        }
+        [HttpPut]
+        public async Task<ActionResult> EditById(Funcionario funcionario)
+        {
+            var respostas = await _service.EditById(funcionario);
+            return Ok(respostas);
         }
     }
 }

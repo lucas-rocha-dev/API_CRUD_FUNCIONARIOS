@@ -130,44 +130,40 @@ namespace API_CRUD_FUNCIONARIOS.Services
             
         }
 
-        public async Task<Response<Funcionario>> EditPerId(Funcionario funcionario)
+        public async Task<Response<Funcionario>> EditById(Funcionario funcionario)
         {
             Response<Funcionario> resposta = new Response<Funcionario>();
 
             try {
-                var funcionarioResposta = await _context.Funcionarios.FirstOrDefaultAsync(fun => fun == funcionario);
-                if (funcionarioResposta == null) {
-                    resposta.STATUS = true;
+                var funcionarioExistente = await _context.Funcionarios.FirstOrDefaultAsync(fun => fun.ID == funcionario.ID);
+
+                if (funcionarioExistente == null) {
+                    resposta.STATUS = false;
                     resposta.DADOS = null;
-                    resposta.MENSAGEM = "Funcionario não encontrado";
+                    resposta.MENSAGEM = "Funcionário não encontrado.";
                 }
                 else {
+                    funcionarioExistente.NOME = funcionario.NOME;
+                    funcionarioExistente.SALARIO = funcionario.SALARIO;
+                    funcionarioExistente.CARGO = funcionario.CARGO;
 
-                    funcionarioResposta.NOME = funcionario.NOME;
-                    funcionarioResposta.SALARIO = funcionario.SALARIO;
-                    funcionarioResposta.CARGO = funcionario.CARGO;
-                    _context.Funcionarios.Update(funcionarioResposta);
-
+                    _context.Funcionarios.Update(funcionarioExistente);
                     await _context.SaveChangesAsync();
 
                     resposta.STATUS = true;
-                    resposta.DADOS = funcionario;
-                    resposta.MENSAGEM = "Funcionario Editado!";
-                    _context.Funcionarios.Remove(funcionario);
-                    await _context.SaveChangesAsync();
+                    resposta.DADOS = funcionarioExistente;
+                    resposta.MENSAGEM = "Funcionário editado com sucesso.";
                 }
+
                 return resposta;
-
-
             }
             catch (Exception ex) {
-                resposta.STATUS = true;
+                resposta.STATUS = false;
                 resposta.DADOS = null;
-                resposta.MENSAGEM = ex.Message;
-
+                resposta.MENSAGEM = $"Erro ao editar funcionário: {ex.Message}";
                 return resposta;
-
             }
         }
+
     }
 }

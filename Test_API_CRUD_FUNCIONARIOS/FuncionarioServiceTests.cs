@@ -117,10 +117,10 @@ namespace Test_API_CRUD_FUNCIONARIOS
             funcionario.SALARIO = 5500;
             funcionario.CARGO = "Gestor Senior";
 
-            var response = await _service.EditPerId(funcionario);
+            var response = await _service.EditById(funcionario);
 
             Assert.IsTrue(response.STATUS);
-            Assert.AreEqual("Funcionario Editado!", response.MENSAGEM);
+            Assert.AreEqual("Funcionário editado com sucesso.", response.MENSAGEM);
             Assert.AreEqual("Pedro Silva", response.DADOS.NOME);
         }
 
