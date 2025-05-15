@@ -2,6 +2,7 @@
 using API_CRUD_FUNCIONARIOS.Models;
 using API_CRUD_FUNCIONARIOS.Context;
 using Microsoft.EntityFrameworkCore;
+using API_CRUD_FUNCIONARIOS.Dto;
 
 namespace API_CRUD_FUNCIONARIOS.Services
 {
@@ -15,15 +16,22 @@ namespace API_CRUD_FUNCIONARIOS.Services
             _context = context;
         }
 
-        public async Task<Response<Funcionario>> CreateFuncionario(Funcionario funcionario)
+        public async Task<Response<Funcionario>> CreateFuncionario(FuncionarioCreateDto funcionario)
         {
             Response<Funcionario> resposta = new Response<Funcionario>();
 
             try {
-                _context.Funcionarios.Add(funcionario);
+                var newFuncionario = new Funcionario() {
+                    NOME = funcionario.NOME,
+                    SALARIO = funcionario.SALARIO,
+                    CARGO = funcionario.CARGO,
+
+                };
+
+                _context.Funcionarios.Add(newFuncionario);
                 await _context.SaveChangesAsync();
 
-                resposta.DADOS = funcionario; 
+                resposta.DADOS = newFuncionario; 
                 resposta.STATUS = true;
                 resposta.MENSAGEM = "Funcionario cadastrado";
                 return resposta;
@@ -60,7 +68,7 @@ namespace API_CRUD_FUNCIONARIOS.Services
             }
         }
 
-        public async Task<Response<Funcionario>> GetPerId(int id)
+        public async Task<Response<Funcionario>> GetById(int id)
         {
             Response<Funcionario> resposta = new Response<Funcionario>();
 
@@ -91,7 +99,7 @@ namespace API_CRUD_FUNCIONARIOS.Services
             }
         }
 
-        public async Task<Response<Funcionario>> DeletePerId(int id)
+        public async Task<Response<Funcionario>> Delete(int id)
         {
             Response<Funcionario> resposta = new Response<Funcionario>();
 

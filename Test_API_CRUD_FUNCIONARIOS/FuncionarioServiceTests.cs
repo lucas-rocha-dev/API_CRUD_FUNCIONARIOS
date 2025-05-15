@@ -1,4 +1,5 @@
 ﻿using API_CRUD_FUNCIONARIOS.Context;
+using API_CRUD_FUNCIONARIOS.Dto;
 using API_CRUD_FUNCIONARIOS.Models.Entities;
 using API_CRUD_FUNCIONARIOS.Services;
 using Microsoft.EntityFrameworkCore;
@@ -34,7 +35,7 @@ namespace Test_API_CRUD_FUNCIONARIOS
         [TestMethod]
         public async Task CreateFuncionario_DeveRetornarFuncionarioCadastrado()
         {
-            var funcionario = new Funcionario { NOME = "João", SALARIO = 3000, CARGO = "Dev" };
+            var funcionario = new FuncionarioCreateDto { NOME = "João", SALARIO = 3000, CARGO = "Dev" };
 
             var response = await _service.CreateFuncionario(funcionario);
 
@@ -64,7 +65,7 @@ namespace Test_API_CRUD_FUNCIONARIOS
             await _context.Funcionarios.AddAsync(funcionario);
             await _context.SaveChangesAsync();
 
-            var response = await _service.GetPerId(funcionario.ID);
+            var response = await _service.GetById(funcionario.ID);
 
             Assert.IsTrue(response.STATUS);
             Assert.IsNotNull(response.DADOS);
@@ -74,7 +75,7 @@ namespace Test_API_CRUD_FUNCIONARIOS
         [TestMethod]
         public async Task GetPerId_Inexistente_DeveRetornarMensagemNaoEncontrado()
         {
-            var response = await _service.GetPerId(999);
+            var response = await _service.GetById(999);
 
             Assert.IsTrue(response.STATUS);
             Assert.IsNull(response.DADOS);
@@ -88,7 +89,7 @@ namespace Test_API_CRUD_FUNCIONARIOS
             await _context.Funcionarios.AddAsync(funcionario);
             await _context.SaveChangesAsync();
 
-            var response = await _service.DeletePerId(funcionario.ID);
+            var response = await _service.Delete(funcionario.ID);
 
             Assert.IsTrue(response.STATUS);
             Assert.AreEqual("Funcionario DELETADO!", response.MENSAGEM);
@@ -98,7 +99,7 @@ namespace Test_API_CRUD_FUNCIONARIOS
         [TestMethod]
         public async Task DeletePerId_Inexistente_DeveRetornarMensagem()
         {
-            var response = await _service.DeletePerId(12345);
+            var response = await _service.Delete(12345);
 
             Assert.IsTrue(response.STATUS);
             Assert.IsNull(response.DADOS);

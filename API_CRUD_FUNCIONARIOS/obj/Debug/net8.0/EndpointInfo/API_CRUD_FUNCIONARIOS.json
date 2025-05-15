@@ -5,26 +5,26 @@
     "version": "1.0"
   },
   "paths": {
-    "/Funcionaro/CreateFuncionario": {
+    "/Funcionaros": {
       "post": {
         "tags": [
-          "Funcionaro"
+          "Funcionaros"
         ],
         "requestBody": {
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/Funcionario"
+                "$ref": "#/components/schemas/FuncionarioCreateDto"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/Funcionario"
+                "$ref": "#/components/schemas/FuncionarioCreateDto"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/Funcionario"
+                "$ref": "#/components/schemas/FuncionarioCreateDto"
               }
             }
           }
@@ -51,12 +51,10 @@
             }
           }
         }
-      }
-    },
-    "/Funcionaro/GetAllFuncionarios": {
+      },
       "get": {
         "tags": [
-          "Funcionaro"
+          "Funcionaros"
         ],
         "responses": {
           "200": {
@@ -82,15 +80,16 @@
         }
       }
     },
-    "/Funcionaro/GetPerId": {
+    "/Funcionaros/{id}": {
       "get": {
         "tags": [
-          "Funcionaro"
+          "Funcionaros"
         ],
         "parameters": [
           {
             "name": "id",
-            "in": "query",
+            "in": "path",
+            "required": true,
             "schema": {
               "type": "integer",
               "format": "int32"
@@ -119,17 +118,16 @@
             }
           }
         }
-      }
-    },
-    "/Funcionaro/DeletePerId": {
+      },
       "delete": {
         "tags": [
-          "Funcionaro"
+          "Funcionaros"
         ],
         "parameters": [
           {
             "name": "id",
-            "in": "query",
+            "in": "path",
+            "required": true,
             "schema": {
               "type": "integer",
               "format": "int32"
@@ -153,6 +151,24 @@
             "type": "integer",
             "format": "int32"
           },
+          "nome": {
+            "type": "string",
+            "nullable": true
+          },
+          "salario": {
+            "type": "number",
+            "format": "double"
+          },
+          "cargo": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "FuncionarioCreateDto": {
+        "type": "object",
+        "properties": {
           "nome": {
             "type": "string",
             "nullable": true

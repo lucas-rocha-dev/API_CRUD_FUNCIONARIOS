@@ -1,15 +1,15 @@
 [
   {
-    "ContainingType": "API_CRUD_FUNCIONARIOS.Controllers.FuncionaroController",
+    "ContainingType": "API_CRUD_FUNCIONARIOS.Controllers.FuncionarosController",
     "Method": "CreateFuncionario",
-    "RelativePath": "Funcionaro/CreateFuncionario",
+    "RelativePath": "Funcionaros",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
         "Name": "funcionario",
-        "Type": "API_CRUD_FUNCIONARIOS.Models.Entities.Funcionario",
+        "Type": "API_CRUD_FUNCIONARIOS.Dto.FuncionarioCreateDto",
         "IsRequired": true
       }
     ],
@@ -26,25 +26,9 @@
     ]
   },
   {
-    "ContainingType": "API_CRUD_FUNCIONARIOS.Controllers.FuncionaroController",
-    "Method": "DeletePerId",
-    "RelativePath": "Funcionaro/DeletePerId",
-    "HttpMethod": "DELETE",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "API_CRUD_FUNCIONARIOS.Controllers.FuncionaroController",
-    "Method": "GetAllFuncionarios",
-    "RelativePath": "Funcionaro/GetAllFuncionarios",
+    "ContainingType": "API_CRUD_FUNCIONARIOS.Controllers.FuncionarosController",
+    "Method": "GetAll",
+    "RelativePath": "Funcionaros",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -62,9 +46,9 @@
     ]
   },
   {
-    "ContainingType": "API_CRUD_FUNCIONARIOS.Controllers.FuncionaroController",
-    "Method": "GetPerId",
-    "RelativePath": "Funcionaro/GetPerId",
+    "ContainingType": "API_CRUD_FUNCIONARIOS.Controllers.FuncionarosController",
+    "Method": "GetById",
+    "RelativePath": "Funcionaros/{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -72,7 +56,7 @@
       {
         "Name": "id",
         "Type": "System.Int32",
-        "IsRequired": false
+        "IsRequired": true
       }
     ],
     "ReturnTypes": [
@@ -86,5 +70,21 @@
         "StatusCode": 200
       }
     ]
+  },
+  {
+    "ContainingType": "API_CRUD_FUNCIONARIOS.Controllers.FuncionarosController",
+    "Method": "Delete",
+    "RelativePath": "Funcionaros/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
   }
 ]
